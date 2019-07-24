@@ -44,12 +44,53 @@ class Event1(webapp2.RequestHandler):
         room2_page_template = JINJA_ENVIRONMENT.get_template('templates/room2.html')
         game_page_template = JINJA_ENVIRONMENT.get_template('templates/gameplay.html')
 
+        usernameinput = self.request.get('user-name')
+
+        name_dict = {
+            "user_name": usernameinput
+        }
+
         room_input = self.request.get('room-type')
+
         def chooseRoom():
             if (room_input == "1"):
                 self.response.write(room1_page_template.render())
             elif (room_input == "2"):
                 self.response.write(room2_page_template.render())
+            elif room_input != "1" or room_input != "2":
+                self.response.write(game_page_template.render())
+
+        chooseRoom()
+
+# class EditMemeHandler(webapp2.RequestHandler):
+#     def get(self):
+#         meme_key_string = self.request.get('meme-key')
+#         meme_key = ndb.(urlsafe=meme_key_string)
+#         meme = meme_key.get()
+#         # ^ This meme is an object for the type meme.
+#         user = users.get_current_user() #get the current logged in users
+#         if meme.creator != user.user_id():
+#             # do something bad
+#             pass
+#         else:
+#             meme.top_text = self.request.get('top_text')
+#             meme.middle_text = self.request.get('middle_text')
+#             meme.bottom_text = self.request.get('bottom_text')
+#             meme.put()
+#
+# class UserProfile(webapp2.RequestHandler):
+#     user_id = ndb.StringProperty(required=true)
+#     game_nickname = ndb.StringProperty(required=true)
+#     favorite_color = ndb.StringProperty(required=true)
+#     style_preferences = ndb.StringProperty(required=true)
+#
+#
+#
+#         if memes:
+#             latest_meme_key = memes[0].key.urlsafe()
+#         else:
+#             latest_meme_key = ""
+#         for meme in memes:
 
 
 
@@ -58,5 +99,5 @@ app = webapp2.WSGIApplication([
     ('/', StartPage),
     ('/createcharacter', CreateCharacterPage),
     ('/gameplay', GameplayPage),
-    ('/event1', Event1)
+    ('/event1', Event1),
 ], debug=True)
