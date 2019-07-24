@@ -1,0 +1,36 @@
+body {
+  margin: 0px;
+}
+
+
+#title {
+  color: #FBBA72;
+  background-color: #8F250C;
+  text-align: center;
+  font-family: Courier, monospace;
+
+}
+
+h4 {
+  font-style: italic;
+}
+
+.button1 {
+  background-color: #FBBA72;
+  border: 5px solid #8F250C;
+  text-align: center;
+}
+
+.button2 {
+  background-color: #FBBA72;
+  border: 2px solid #8F250C;
+}
+
+#button {
+  color: white;
+  background-color: #691E06;
+  font-family: Courier, monospace;
+  text-align: center;
+}
+
+}
