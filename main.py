@@ -15,38 +15,48 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 class StartPage(webapp2.RequestHandler):
     def get(self):
-        start_page_template = JINJA_ENVIRONMENT.get_template('templates/gameplay.html')
+        start_page_template = JINJA_ENVIRONMENT.get_template('templates/startpage.html')
 
-        user_current_room = self.request.get('current-room')
+        self.response.write(start_page_template.render())
 
-        user_current_room_dict = {
-            "current_room": user_current_room
+
+class CreateCharacterPage(webapp2.RequestHandler):
+    def post(self):
+        create_character_template = JINJA_ENVIRONMENT.get_template('templates/createcharacter.html')
+        self.response.write(create_character_template.render())
+
+
+class GameplayPage(webapp2.RequestHandler):
+    def post(self):
+        game_page_template = JINJA_ENVIRONMENT.get_template('templates/gameplay.html')
+
+        usernameinput = self.request.get('user-name')
+
+        name_dict = {
+            "user_name": usernameinput
         }
 
-        self.response.write(start_page_template.render(user_current_room_dict))
+        self.response.write(game_page_template.render(name_dict))
 
-    # def post(self):
-        # to do: get current room from hidden input and user action
+class Event1(webapp2.RequestHandler):
+    def post(self):
+        room1_page_template = JINJA_ENVIRONMENT.get_template('templates/room1.html')
+        room2_page_template = JINJA_ENVIRONMENT.get_template('templates/room2.html')
+        game_page_template = JINJA_ENVIRONMENT.get_template('templates/gameplay.html')
+
+        room_input = self.request.get('room-type')
+        def chooseRoom():
+            if (room_input == "1"):
+                self.response.write(room1_page_template.render())
+            elif (room_input == "2"):
+                self.response.write(room2_page_template.render())
 
 
-# class CreateCharacterPage(webapp2.RequestHandler):
-#     def post(self):
-#         create_character_template = JINJA_ENVIRONMENT.get_template('templates/createcharacter.html')
-#         self.response.write(create_character_template.render())
-#
-# class GameplayPage(webapp2.RequestHandler):
-#     def post(self):
-#         game_page_template = JINJA_ENVIRONMENT.get_template('templates/gameplay.html')
-#
-#         usernameinput = self.request.get('user-name')
-#
-#         name_dict = {
-#              "user_name": usernameinput
-#          }
-#
-#         self.response.write(game_page_template.render(name_dict))
 
 # the app configuration section
 app = webapp2.WSGIApplication([
     ('/', StartPage),
+    ('/createcharacter', CreateCharacterPage),
+    ('/gameplay', GameplayPage),
+    ('/event1', Event1)
 ], debug=True)

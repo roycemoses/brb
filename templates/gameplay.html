@@ -4,13 +4,12 @@
     <title>BRB\'s Project</title>
   </head>
   <body>
-
-    <script>
-      <form method="post" action="/">
-        <input type="text" name="user-name" value="enter your name">
-        <input type="hidden" name="current-room" value="{{current_room}}">
-        <input type="submit" value="Start Game">
+    <p>Your name is: {{user_name}}</p>
+    <p>Choose room 1 or room 2:</p>
+      <form method="post" action="/event1">
+        <input type="text" name="room-type" maxlength="1">
+          <br>
+        <input type="submit" value="Go!">
       </form>
-    </script>
   </body>
 </html>
