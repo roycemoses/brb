@@ -1,0 +1,12 @@
+
+#main {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+#main h1 {
+  display: inline;
+}
