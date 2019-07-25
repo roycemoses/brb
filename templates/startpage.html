@@ -3,22 +3,29 @@
   <head>
 
     <title>Text Video Game</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
     <div id="main">
+
       <h1>Text Based Video Game</h1>
       <p>a choose your own adventure game</p>
-    </div><br>
+
+      <div id="buttons">
+        <form method = post action = "/createcharacter">
+          <input class = "content-button1" type = "button" value = "Start"></input>
+        </form>
+        <form method = post action = "/wedontknowyet">
+          <input class = "content-button2" type = "button" value = "Load Past Choices"></input>
+        </form>
+        <form method = post action "/againwedontknowyet">
+          <input class = "content-button3" type = "button" value = "About the Creators"></input>
+        </form>
+      </div><br>
+
+    </div>
       <!-- action="/answers" -->
-    <div id="buttons">
-        <div class = "content-button1">
-           <a href = "/createcharacter" class = "right-button">Start</a>
-        </div><br>
-        <div class = "content-button2">
-          <a href = "/wedontknowyet" class = "load-choices">Load Past Choices</a>
-        </div>
-    </div><br>
+    <footer class = "footer">created by CSSI 2019 students</footer>
 
   </body>
 </html>
