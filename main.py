@@ -39,7 +39,7 @@ class GameplayPage(webapp2.RequestHandler):
         self.response.write(game_page_template.render(name_dict))
 
 class Event1(webapp2.RequestHandler):
-    def post(self):
+    def get(self):
         room1_page_template = JINJA_ENVIRONMENT.get_template('templates/room1.html')
         room2_page_template = JINJA_ENVIRONMENT.get_template('templates/room2.html')
         game_page_template = JINJA_ENVIRONMENT.get_template('templates/gameplay.html')
@@ -57,8 +57,67 @@ class Event1(webapp2.RequestHandler):
                 self.response.write(room1_page_template.render())
             elif (room_input == "2"):
                 self.response.write(room2_page_template.render())
-            elif room_input != "1" or room_input != "2":
-                self.response.write(game_page_template.render())
+
+        chooseRoom()
+
+class Event2_1(webapp2.RequestHandler):
+    def get(self):
+        room3_page_template = JINJA_ENVIRONMENT.get_template('templates/room3.html')
+        room4_page_template = JINJA_ENVIRONMENT.get_template('templates/room4.html')
+        game_page_template = JINJA_ENVIRONMENT.get_template('templates/gameplay.html')
+
+        room_input = self.request.get('room-type')
+
+        def chooseRoom():
+            if (room_input == "3"):
+                self.response.write(room3_page_template.render())
+            elif (room_input == "4"):
+                self.response.write(room4_page_template.render())
+
+        chooseRoom()
+
+class Event2_2(webapp2.RequestHandler):
+    def get(self):
+        room5_page_template = JINJA_ENVIRONMENT.get_template('templates/room5.html')
+        room6_page_template = JINJA_ENVIRONMENT.get_template('templates/room6.html')
+
+        room_input = self.request.get('room-type')
+
+        def chooseRoom():
+            if (room_input == "5"):
+                self.response.write(room5_page_template.render())
+            elif (room_input == "6"):
+                self.response.write(room6_page_template.render())
+
+        chooseRoom()
+
+class Event3_1(webapp2.RequestHandler):
+    def get(self):
+        room7_page_template = JINJA_ENVIRONMENT.get_template('templates/room7WIN.html')
+        room8_page_template = JINJA_ENVIRONMENT.get_template('templates/room8LOSE.html')
+
+        room_input = self.request.get('room-type')
+
+        def chooseRoom():
+            if (room_input == "7"):
+                self.response.write(room7_page_template.render())
+            elif (room_input == "8"):
+                self.response.write(room8_page_template.render())
+
+        chooseRoom()
+
+class Event3_2(webapp2.RequestHandler):
+    def get(self):
+        room9_page_template = JINJA_ENVIRONMENT.get_template('templates/room9LOSE.html')
+        room10_page_template = JINJA_ENVIRONMENT.get_template('templates/room10LOSE.html')
+
+        room_input = self.request.get('room-type')
+
+        def chooseRoom():
+            if (room_input == "9"):
+                self.response.write(room9_page_template.render())
+            elif (room_input == "10"):
+                self.response.write(room10_page_template.render())
 
         chooseRoom()
 
@@ -100,4 +159,8 @@ app = webapp2.WSGIApplication([
     ('/createcharacter', CreateCharacterPage),
     ('/gameplay', GameplayPage),
     ('/event1', Event1),
+    ('/event2_1', Event2_1),
+    ('/event2_2', Event2_2),
+    ('/event3_1', Event3_1),
+    ('/event3_2', Event3_2),
 ], debug=True)

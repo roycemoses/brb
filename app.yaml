@@ -8,11 +8,7 @@ handlers:
 
 - url: /.*
   script: main.app
-
-# - url: .*
-#   script: main.app
-#   login: required
-#
+  login: required
 
 libraries:
 - name: webapp2

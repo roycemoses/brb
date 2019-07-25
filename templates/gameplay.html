@@ -6,10 +6,12 @@
   <body>
     <p>Your name is: {{user_name}}</p>
     <p>Choose room 1 or room 2:</p>
-      <form method="post" action="/event1">
-        <input type="text" name="room-type" maxlength="1">
-          <br>
-        <input type="submit" value="Go!">
-      </form>
+    <form method="get" action="/event1">
+      <select name="room-type">
+        <option value="1">Room 1</option>
+        <option value="2">Room 2</option>
+      </select>
+    <input type="submit" value="Submit">
+    </form>
   </body>
 </html>
