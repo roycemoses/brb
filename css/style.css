@@ -1,5 +1,5 @@
 
-#main {
+#main-startpage {
   max-width: 500px;
   margin: auto;
   display: flex;
@@ -8,28 +8,30 @@
   flex: 1;
 }
 
-#main h1 {
+#main-startpage h1 {
   font-family: Courier, monospace;
   text-align: center;
   color: white;
 }
 
-#main p {
+#main-startpage p {
   font-family: Courier, monospace;
   color: white;
   text-align: center;
   font-style: italic;
 }
- #buttons {
+
+ #buttons-startpage {
    display: flex;
    text-align: center;
    margin: 30px;
    padding: 50px;
    flex-wrap: wrap;
    flex-direction: column;
+   transition-duration: 0.4s;
  }
 
- .content-button1 {
+ #buttons-startpage .content-button1 {
    cursor: pointer;
    background-color: #26C13E;
    text-align: center;
@@ -43,25 +45,15 @@
    border-width: 10px;
    border-color: #0E4717;
    justify-content: center;
+   width: 300px;
  }
 
- .content-button2 {
-   cursor: pointer;
-   background-color: #26C13E;
-   text-align: center;
-   color: white;
-   font-family: Courier, monospace;
-   text-transform: lowercase;
-   margin: 30px;
-   padding: 14px 30px;
-   font-size: 20px;
-   border-style: ridge;
-   border-width: 10px;
-   border-color: #0E4717;
-    justify-content: center;
+ #buttons-startpage .content-button1:hover {
+   background-color: #0E4717;
+   color: #26C13E;
  }
 
- .content-button3 {
+ #buttons-startpage .content-button2 {
    cursor: pointer;
    background-color: #26C13E;
    text-align: center;
@@ -75,16 +67,44 @@
    border-width: 10px;
    border-color: #0E4717;
    justify-content: center;
+   width: 300px;
  }
 
- body {
+ #buttons-startpage .content-button2:hover {
+   background-color: #0E4717;
+   color: #26C13E;
+ }
+
+ #buttons-startpage .content-button3 {
+   cursor: pointer;
+   background-color: #26C13E;
+   text-align: center;
+   color: white;
+   font-family: Courier, monospace;
+   text-transform: lowercase;
+   margin: 30px;
+   padding: 14px 30px;
+   font-size: 20px;
+   border-style: ridge;
+   border-width: 10px;
+   border-color: #0E4717;
+   justify-content: center;
+   width: 300px;
+ }
+
+ #buttons-startpage .content-button3:hover {
+   background-color: #0E4717;
+   color: #26C13E;
+ }
+
+ #body-startpage {
    background-color: #000000;
    display: flex;
    min-height: 100vh;
    flex-direction: column;
  }
 
- .footer {
+ .footer-startpage {
    margin: auto -1 -1 -1;
    background-color: #1F2A2B;
    text-align: center;
@@ -95,4 +115,131 @@
    padding: 20px 50px;
  }
 
- /* #buttons content- */
+ #body-characterpage {
+   background-color: #000000;
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+ }
+
+ #main-characterpage {
+   display: flex;
+   /* margin: auto; */
+   flex-direction: column;
+   min-height: 90vh;
+   flex: 1;
+   flex-wrap: nowrap;
+   align-items: center;
+ }
+
+#characterpage-links {
+  display: flex;
+}
+
+ #characterpage-links .nav-item {
+   width: 100%;
+   list-style: none;
+   background-color: #26C13E;
+   padding-left: 30px;
+   padding-right: 10px;
+   display: flex;
+   justify-content: center;
+ }
+
+ /* #text-characterpage nav {
+   width: 100%;
+   background-color: #26C13E;
+   padding-left: 30px;
+   padding-right: 10px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-left: auto;
+} */
+
+#characterpage-links .characterpage-nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+ #characterpage-links .nav-item a {
+   display: inline-block;
+   padding: 10px 15px;
+   text-decoration: none;
+   color: white;
+   font-family: Courier, monospace;
+   text-align: left;
+   display: flex;
+ }
+
+ #text-characterpage {
+   display: flex;
+   flex-direction: column;
+ }
+
+ #text-characterpage h1 {
+   font-family: Courier, monospace;
+   text-align: center;
+   color: white;
+ }
+
+ #text-characterpage p {
+   font-family: Courier, monospace;
+   color: white;
+   text-align: center;
+   font-style: italic;
+ }
+
+ #buttons-characterpage {
+   display: flex;
+   text-align: center;
+   margin: 30px;
+   padding: 50px;
+   flex-wrap: wrap;
+   flex-direction: column;
+ }
+
+ #buttons-characterpage input[type = "text"] {
+   border-style: ridge;
+   border-width: 10px;
+   border-color: #0E4717;
+   background-color: white;
+   text-align: left;
+   font-family: Courier, monospace;
+   font-size: 20px;
+ }
+
+#buttons-characterpage .content-button4 {
+  cursor: pointer;
+  background-color: #26C13E;
+  text-align: center;
+  color: white;
+  font-family: Courier, monospace;
+  text-transform: lowercase;
+  margin: 30px;
+  padding: 14px 30px;
+  font-size: 20px;
+  border-style: ridge;
+  border-width: 10px;
+  border-color: #0E4717;
+  justify-content: center;
+}
+
+#buttons-characterpage .content-button4:hover {
+  background-color: #0E4717;
+  color: #26C13E;
+}
+
+.footer-characterpage {
+  margin: auto -1 -1 -1;
+  background-color: #1F2A2B;
+  text-align: center;
+  font-family: Courier, monospace;
+  font-size: 15px;
+  font-style: italic;
+  color: #6E7C7E;
+  padding: 20px 50px;
+}
