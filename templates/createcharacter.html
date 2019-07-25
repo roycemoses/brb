@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <title>BRB\'s Project</title>
@@ -11,5 +11,43 @@
           <br>
         <input type="submit" value="Start Game">
       </form>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Text Video Game</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body id = "body-characterpage">
+    <div id = "main-characterpage">
+
+      <div id = "characterpage-links">
+        <nav class = "navbar-characterpage">
+          <ul class = "characterpage-nav-links">
+            <li class = "nav-item"><a href = "/">start page</a></li>
+            <li class = "nav-item"><a href = "/">load past choices</a></li>
+            <li class = "nav-item"><a href = "/">about</a></li>
+          </ul>
+      </nav>
+    </div>
+
+      <div id = "text-characterpage">
+        <h1>Before You Begin...</h1>
+        <p>you'll need to tell us a little bit about yourself...</p>
+
+        <div id = "buttons-characterpage">
+          <form method = "post" action = "/gameplay">
+            <input type = "text" name = "user-name" placeholder = "type your name"><br>
+            <button class = "content-button4" type = "submit">begin game</button>
+        </div>
+      </div>
+
+      </div>
+      <!-- action="/answers" -->
+    <footer class = "footer-characterpage">created by CSSI 2019 students</footer>
+
   </body>
 </html>
