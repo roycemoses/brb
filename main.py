@@ -6,6 +6,8 @@ import json
 import random
 import jinja2
 
+from models import Profile
+from google.appengine.api import users
 from google.appengine.api import urlfetch
 
 JINJA_ENVIRONMENT = jinja2.Environment(
@@ -14,29 +16,70 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     autoescape=True)
 
 class StartPage(webapp2.RequestHandler):
+
     def get(self):
         start_page_template = JINJA_ENVIRONMENT.get_template('templates/startpage.html')
 
         self.response.write(start_page_template.render())
 
+# class LoginPage(webapp2.RequestHandler):
+#     def get(self):
+#         user = users.get_current_user()
+#         if user:
+#             nickname = user.nickname()
+#             logout_url = users.create_logout_url('/')
+#             greeting = 'Welcome, {}! (<a href="{}">sign out</a>)'.format(
+#                 nickname, logout_url)
+#         else:
+#             login_url = users.create_login_url('/')
+#             greeting = '<a href="{}">Sign in</a>'.format(login_url)
+#         self.response.write(
+#             '<html><body>{}</body></html>'.format(greeting))
+
+
 
 class CreateCharacterPage(webapp2.RequestHandler):
-    def post(self):
-        create_character_template = JINJA_ENVIRONMENT.get_template('templates/createcharacter.html')
-        self.response.write(create_character_template.render())
+    def get(self):
+        profile_template = JINJA_ENVIRONMENT.get_template("templates/createcharacter.html")
+        logged_in_user = users.get_current_user()
+
+        my_profiles = Profile.query().filter(Profile.user_id == logged_in_user.user_id()).fetch(1)
+        if len(my_profiles) == 1:
+            my_profile = my_profiles[0]
+        else:
+            my_profile = None
+
+        dict_for_template = {
+        'profile': my_profile,
+        }
+
+        self.response.write(profile_template.render(dict_for_template))
 
 
 class GameplayPage(webapp2.RequestHandler):
     def post(self):
         game_page_template = JINJA_ENVIRONMENT.get_template('templates/gameplay.html')
+        logged_in_user = users.get_current_user()
+        my_nickname = self.request.get('nickname')
 
-        usernameinput = self.request.get('user-name')
+        my_profiles = Profile.query().filter(Profile.user_id == logged_in_user.user_id()).fetch(1)
+        if my_profiles:
+            my_profile = my_profiles[0]
+        else:
+            my_profile = Profile()
+        my_profile.nickname = my_nickname
+        my_profile.user_id = logged_in_user.user_id()
+        my_profile.put()
 
         name_dict = {
-            "user_name": usernameinput
+            "profile": my_profile
+
         }
 
         self.response.write(game_page_template.render(name_dict))
+        profile = Profile.query().filter(Profile.user_id == logged_in_user.user_id()).fetch()[0]
+        nickname = profile.nickname
+        print(nickname)
 
 class Event1(webapp2.RequestHandler):
     def get(self):
@@ -120,6 +163,8 @@ class Event3_2(webapp2.RequestHandler):
                 self.response.write(room10_page_template.render())
 
         chooseRoom()
+
+
 
 # class EditMemeHandler(webapp2.RequestHandler):
 #     def get(self):
