@@ -656,6 +656,7 @@ time, mark, audio, video {
     list-style: none;
     display: flex;
     padding: 0;
+    margin: 0;
   }
 
 #room1page-links .nav-item a {
@@ -1577,3 +1578,187 @@ time, mark, audio, video {
           display: flex;
           width: 100%;
         }
+
+/* next page */
+
+#main-aboutpage {
+   /* max-width: 500px; */
+   margin:  auto;
+   display: flex;
+   flex-direction: column;
+   min-height: 90vh;
+   flex: 1;
+   align-items: center;
+ }
+
+#body-aboutpage {
+   background-color: #000000;
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+   margin: 0;
+ }
+
+#text-aboutpage {
+   display: flex;
+   font-family: Courier, monospace;
+   color: white;
+   text-align: center;
+   flex-direction: column;
+   margin: 30px;
+   padding: 14px 30px;
+ }
+
+ #text-aboutpage h1 {
+ }
+
+.footer-aboutpage {
+   /* margin: auto -1 -1 -1; */
+   display: flex;
+   background-color: #1F2A2B;
+   text-align: center;
+   font-family: Courier, monospace;
+   font-size: 15px;
+   font-style: italic;
+   color: #6E7C7E;
+   padding: 20px 50px;
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   justify-content: center;
+ }
+
+#aboutpage-links {
+   display: flex;
+ }
+
+#aboutpage-links .nav-item {
+    width: 100%;
+    list-style: none;
+    background-color: #26C13E;
+    padding-left: 30px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+#aboutpage-links .aboutpage-nav-links {
+     list-style: none;
+     display: flex;
+     padding: 0;
+     margin: 0;
+   }
+
+#aboutpage-links .nav-item a {
+    /* display: inline-block; */
+    /* padding: 10px 15px; */
+    /* text-decoration: none;
+    color: white;
+    font-family: Courier, monospace;
+    text-align: left;
+    display: flex;
+    width: 100%; */
+    padding-left: 30px;
+    padding-right: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: Courier, monospace;
+    text-align: center;
+    display: flex;
+    width: 100%;
+  }
+
+/* next page */
+
+#main-logoutpage {
+   /* max-width: 500px; */
+   margin:  auto;
+   display: flex;
+   flex-direction: column;
+   min-height: 90vh;
+   flex: 1;
+   align-items: center;
+ }
+
+#body-logoutpage {
+   background-color: #000000;
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+   margin: 0;
+ }
+
+#text-logoutpage {
+   display: flex;
+   font-family: Courier, monospace;
+   color: white;
+   text-align: center;
+   flex-direction: column;
+   margin: 30px;
+   padding: 14px 30px;
+ }
+
+ #text-aboutpage h1 {
+ }
+
+.footer-logoutpage {
+   /* margin: auto -1 -1 -1; */
+   display: flex;
+   background-color: #1F2A2B;
+   text-align: center;
+   font-family: Courier, monospace;
+   font-size: 15px;
+   font-style: italic;
+   color: #6E7C7E;
+   padding: 20px 50px;
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   justify-content: center;
+ }
+
+#logoutpage-links {
+   display: flex;
+ }
+
+#logoutpage-links .nav-item {
+    width: 100%;
+    list-style: none;
+    background-color: #26C13E;
+    padding-left: 30px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+#logoutpage-links .logoutpage-nav-links {
+     list-style: none;
+     display: flex;
+     padding: 0;
+     margin: 0;
+   }
+
+#logoutpage-links .nav-item a {
+    /* display: inline-block; */
+    /* padding: 10px 15px; */
+    /* text-decoration: none;
+    color: white;
+    font-family: Courier, monospace;
+    text-align: left;
+    display: flex;
+    width: 100%; */
+    padding-left: 30px;
+    padding-right: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: Courier, monospace;
+    text-align: center;
+    display: flex;
+    width: 100%;
+  }
