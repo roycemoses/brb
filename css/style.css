@@ -1,3 +1,24 @@
+/* html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+} */
+
 #main-startpage {
   max-width: 500px;
   margin: auto;
@@ -101,6 +122,7 @@
    display: flex;
    min-height: 100vh;
    flex-direction: column;
+   margin: 0;
  }
 
  .footer-startpage {
@@ -121,7 +143,10 @@
    flex-direction: column;
    align-content: center;
    justify-content: center;
+   margin: 0;
  }
+
+ /* next page */
 
  #main-characterpage {
    display: flex;
@@ -162,16 +187,22 @@
   list-style: none;
   display: flex;
   padding: 0;
+  margin: 0;
 }
 
  #characterpage-links .nav-item a {
-   display: inline-block;
-   padding: 10px 15px;
+   /* display: inline-block; */
+   /* padding: 10px 15px; */
+   padding-left: 30px;
+   padding-right: 30px;
+   padding: 10px;
    text-decoration: none;
    color: white;
    font-family: Courier, monospace;
-   text-align: left;
+   text-align: center;
    display: flex;
+   width: 100%;
+
  }
 
  #text-characterpage {
@@ -242,3 +273,1307 @@
   color: #6E7C7E;
   padding: 20px 50px;
 }
+
+/* next page */
+
+#main-gamepage {
+  /* max-width: 500px; */
+  margin:  auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  flex: 1;
+  align-items: center;
+}
+
+#body-gamepage {
+  background-color: #000000;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 0;
+}
+
+#text-gamepage {
+    display: flex;
+    font-family: Courier, monospace;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    flex-direction: column;
+    margin: 30px;
+    padding: 14px 30px;
+}
+
+#dropdown-gamepage {
+  display: flex;
+  text-align: center;
+  margin: 30px;
+  padding: 50px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#dropdown-gamepage .room-choice {
+  cursor: pointer;
+  background-color: #26C13E;
+  text-align: center;
+  color: white;
+  font-family: Courier, monospace;
+  text-transform: lowercase;
+  margin: 30px;
+  padding: 14px 30px;
+  font-size: 17px;
+  border-style: ridge;
+  border-width: 10px;
+  border-color: #0E4717;
+  justify-content: center;
+  width: 300px;
+  height: 80px;
+}
+
+#dropdown-gamepage .room-choice:hover {
+  background-color: #0E4717;
+  color: #26C13E;
+}
+
+#dropdown-gamepage select {
+  cursor: pointer;
+  background-color: #26C13E;
+  text-align: center;
+  color: white;
+  font-family: Courier, monospace;
+  text-transform: lowercase;
+  margin: 30px;
+  padding: 14px 30px;
+  font-size: 17px;
+  border-style: ridge;
+  border-width: 10px;
+  border-color: #0E4717;
+  justify-content: center;
+  width: 300px;
+  height: 80px;
+}
+
+.footer-gamepage {
+  margin: auto -1 -1 -1;
+  background-color: #1F2A2B;
+  text-align: center;
+  font-family: Courier, monospace;
+  font-size: 15px;
+  font-style: italic;
+  color: #6E7C7E;
+  padding: 20px 50px;
+}
+
+#gamepage-links {
+  display: flex;
+}
+
+ #gamepage-links .nav-item {
+   width: 100%;
+   list-style: none;
+   background-color: #26C13E;
+   padding-left: 30px;
+   padding-right: 10px;
+   display: flex;
+   justify-content: center;
+ }
+
+#gamepage-links .gamepage-nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+ #gamepage-links .nav-item a {
+   /* display: inline-block; */
+   /* padding: 10px 15px; */
+   /* text-decoration: none;
+   color: white;
+   font-family: Courier, monospace;
+   text-align: left;
+   display: flex;
+   width: 100%; */
+   padding-left: 30px;
+   padding-right: 30px;
+   padding: 10px;
+   text-decoration: none;
+   color: white;
+   font-family: Courier, monospace;
+   text-align: center;
+   display: flex;
+   width: 100%;
+ }
+
+ /* next page */
+
+ #main-room2page {
+   /* max-width: 500px; */
+   margin:  auto;
+   display: flex;
+   flex-direction: column;
+   min-height: 90vh;
+   flex: 1;
+   align-items: center;
+ }
+
+ #body-room2page {
+   background-color: #000000;
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+   margin: 0;
+ }
+
+ #text-room2page {
+     display: flex;
+     font-family: Courier, monospace;
+     color: white;
+     text-align: center;
+     font-style: italic;
+     flex-direction: column;
+     margin: 30px;
+     padding: 14px 30px;
+ }
+
+ #dropdown-room2page {
+   display: flex;
+   text-align: center;
+   margin: 30px;
+   padding: 50px;
+   flex-direction: column;
+   justify-content: center;
+ }
+
+ #dropdown-room2page .room-choice2 {
+   cursor: pointer;
+   background-color: #26C13E;
+   text-align: center;
+   color: white;
+   font-family: Courier, monospace;
+   text-transform: lowercase;
+   margin: 30px;
+   padding: 14px 30px;
+   font-size: 17px;
+   border-style: ridge;
+   border-width: 10px;
+   border-color: #0E4717;
+   justify-content: center;
+   width: 300px;
+   height: 80px;
+ }
+
+ #dropdown-room2page .room-choice2:hover {
+   background-color: #0E4717;
+   color: #26C13E;
+ }
+
+ #dropdown-room2page select {
+   cursor: pointer;
+   background-color: #26C13E;
+   text-align: center;
+   color: white;
+   font-family: Courier, monospace;
+   text-transform: lowercase;
+   margin: 30px;
+   padding: 14px 30px;
+   font-size: 17px;
+   border-style: ridge;
+   border-width: 10px;
+   border-color: #0E4717;
+   justify-content: center;
+   width: 300px;
+   height: 80px;
+ }
+
+ .footer-room2page {
+   margin: auto -1 -1 -1;
+   background-color: #1F2A2B;
+   text-align: center;
+   font-family: Courier, monospace;
+   font-size: 15px;
+   font-style: italic;
+   color: #6E7C7E;
+   padding: 20px 50px;
+ }
+
+ #room2page-links {
+   display: flex;
+ }
+
+  #room2page-links .nav-item {
+    width: 100%;
+    list-style: none;
+    background-color: #26C13E;
+    padding-left: 30px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+ #room2page-links .room2page-nav-links {
+   list-style: none;
+   display: flex;
+   padding: 0;
+   margin: 0;
+ }
+
+  #room2page-links .nav-item a {
+    /* display: inline-block; */
+    /* padding: 10px 15px; */
+    /* text-decoration: none;
+    color: white;
+    font-family: Courier, monospace;
+    text-align: left;
+    display: flex;
+    width: 100%; */
+    padding-left: 30px;
+    padding-right: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: Courier, monospace;
+    text-align: center;
+    display: flex;
+    width: 100%;
+  }
+
+  /* next page */
+
+#main-room1page {
+    /* max-width: 500px; */
+    margin:  auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    flex: 1;
+    align-items: center;
+  }
+
+#body-room1page {
+    background-color: #000000;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+#text-room1page {
+      display: flex;
+      font-family: Courier, monospace;
+      color: white;
+      text-align: center;
+      font-style: italic;
+      flex-direction: column;
+      margin: 30px;
+      padding: 14px 30px;
+  }
+
+#dropdown-room1page {
+    display: flex;
+    text-align: center;
+    margin: 30px;
+    padding: 50px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+#dropdown-room1page .room-choice1 {
+    cursor: pointer;
+    background-color: #26C13E;
+    text-align: center;
+    color: white;
+    font-family: Courier, monospace;
+    text-transform: lowercase;
+    margin: 30px;
+    padding: 14px 30px;
+    font-size: 17px;
+    border-style: ridge;
+    border-width: 10px;
+    border-color: #0E4717;
+    justify-content: center;
+    width: 300px;
+    height: 80px;
+  }
+
+#dropdown-room1page .room-choice1:hover {
+    background-color: #0E4717;
+    color: #26C13E;
+  }
+
+#dropdown-room1page select {
+    cursor: pointer;
+    background-color: #26C13E;
+    text-align: center;
+    color: white;
+    font-family: Courier, monospace;
+    text-transform: lowercase;
+    margin: 30px;
+    padding: 14px 30px;
+    font-size: 17px;
+    border-style: ridge;
+    border-width: 10px;
+    border-color: #0E4717;
+    justify-content: center;
+    width: 300px;
+    height: 80px;
+  }
+
+.footer-room1page {
+    margin: auto -1 -1 -1;
+    background-color: #1F2A2B;
+    text-align: center;
+    font-family: Courier, monospace;
+    font-size: 15px;
+    font-style: italic;
+    color: #6E7C7E;
+    padding: 20px 50px;
+  }
+
+#room1page-links {
+    display: flex;
+  }
+
+#room1page-links .nav-item {
+     width: 100%;
+     list-style: none;
+     background-color: #26C13E;
+     padding-left: 30px;
+     padding-right: 10px;
+     display: flex;
+     justify-content: center;
+   }
+
+#room1page-links .room1page-nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+
+#room1page-links .nav-item a {
+     /* display: inline-block; */
+     /* padding: 10px 15px; */
+     /* text-decoration: none;
+     color: white;
+     font-family: Courier, monospace;
+     text-align: left;
+     display: flex;
+     width: 100%; */
+     padding-left: 30px;
+     padding-right: 30px;
+     padding: 10px;
+     text-decoration: none;
+     color: white;
+     font-family: Courier, monospace;
+     text-align: center;
+     display: flex;
+     width: 100%;
+   }
+
+   /* next page */
+
+#main-room3page {
+     /* max-width: 500px; */
+     margin:  auto;
+     display: flex;
+     flex-direction: column;
+     min-height: 90vh;
+     flex: 1;
+     align-items: center;
+   }
+
+#body-room3page {
+     background-color: #000000;
+     display: flex;
+     min-height: 100vh;
+     flex-direction: column;
+     align-content: center;
+     justify-content: center;
+     margin: 0;
+   }
+
+#text-room3page {
+       display: flex;
+       font-family: Courier, monospace;
+       color: white;
+       text-align: center;
+       font-style: italic;
+       flex-direction: column;
+       margin: 30px;
+       padding: 14px 30px;
+   }
+
+#dropdown-room3page {
+     display: flex;
+     text-align: center;
+     margin: 30px;
+     padding: 50px;
+     flex-direction: column;
+     justify-content: center;
+   }
+
+#dropdown-room3page .room-choice3 {
+     cursor: pointer;
+     background-color: #26C13E;
+     text-align: center;
+     color: white;
+     font-family: Courier, monospace;
+     text-transform: lowercase;
+     margin: 30px;
+     padding: 14px 30px;
+     font-size: 17px;
+     border-style: ridge;
+     border-width: 10px;
+     border-color: #0E4717;
+     justify-content: center;
+     width: 300px;
+     height: 80px;
+   }
+
+#dropdown-room3page .room-choice3:hover {
+     background-color: #0E4717;
+     color: #26C13E;
+   }
+
+#dropdown-room3page select {
+     cursor: pointer;
+     background-color: #26C13E;
+     text-align: center;
+     color: white;
+     font-family: Courier, monospace;
+     text-transform: lowercase;
+     margin: 30px;
+     padding: 14px 30px;
+     font-size: 17px;
+     border-style: ridge;
+     border-width: 10px;
+     border-color: #0E4717;
+     justify-content: center;
+     width: 300px;
+     height: 80px;
+   }
+
+.footer-room3page {
+     margin: auto -1 -1 -1;
+     background-color: #1F2A2B;
+     text-align: center;
+     font-family: Courier, monospace;
+     font-size: 15px;
+     font-style: italic;
+     color: #6E7C7E;
+     padding: 20px 50px;
+   }
+
+#room3page-links {
+     display: flex;
+   }
+
+#room3page-links .nav-item {
+      width: 100%;
+      list-style: none;
+      background-color: #26C13E;
+      padding-left: 30px;
+      padding-right: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+#room3page-links .room3page-nav-links {
+     list-style: none;
+     display: flex;
+     padding: 0;
+     margin: 0;
+   }
+
+#room3page-links .nav-item a {
+      /* display: inline-block; */
+      /* padding: 10px 15px; */
+      /* text-decoration: none;
+      color: white;
+      font-family: Courier, monospace;
+      text-align: left;
+      display: flex;
+      width: 100%; */
+      padding-left: 30px;
+      padding-right: 30px;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+      font-family: Courier, monospace;
+      text-align: center;
+      display: flex;
+      width: 100%;
+    }
+
+   /* next page */
+
+#main-room4page {
+     /* max-width: 500px; */
+     margin:  auto;
+     display: flex;
+     flex-direction: column;
+     min-height: 90vh;
+     flex: 1;
+     align-items: center;
+   }
+
+#body-room4page {
+     background-color: #000000;
+     display: flex;
+     min-height: 100vh;
+     flex-direction: column;
+     align-content: center;
+     justify-content: center;
+     margin: 0;
+   }
+
+#text-room4page {
+       display: flex;
+       font-family: Courier, monospace;
+       color: white;
+       text-align: center;
+       font-style: italic;
+       flex-direction: column;
+       margin: 30px;
+       padding: 14px 30px;
+   }
+
+#dropdown-room4page {
+     display: flex;
+     text-align: center;
+     margin: 30px;
+     padding: 50px;
+     flex-direction: column;
+     justify-content: center;
+   }
+
+#dropdown-room4page .room-choice4 {
+     cursor: pointer;
+     background-color: #26C13E;
+     text-align: center;
+     color: white;
+     font-family: Courier, monospace;
+     text-transform: lowercase;
+     margin: 30px;
+     padding: 14px 30px;
+     font-size: 17px;
+     border-style: ridge;
+     border-width: 10px;
+     border-color: #0E4717;
+     justify-content: center;
+     width: 300px;
+     height: 80px;
+   }
+
+#dropdown-room4page .room-choice4:hover {
+     background-color: #0E4717;
+     color: #26C13E;
+   }
+
+#dropdown-room4page select {
+     cursor: pointer;
+     background-color: #26C13E;
+     text-align: center;
+     color: white;
+     font-family: Courier, monospace;
+     text-transform: lowercase;
+     margin: 30px;
+     padding: 14px 30px;
+     font-size: 17px;
+     border-style: ridge;
+     border-width: 10px;
+     border-color: #0E4717;
+     justify-content: center;
+     width: 300px;
+     height: 80px;
+   }
+
+.footer-room4page {
+     margin: auto -1 -1 -1;
+     background-color: #1F2A2B;
+     text-align: center;
+     font-family: Courier, monospace;
+     font-size: 15px;
+     font-style: italic;
+     color: #6E7C7E;
+     padding: 20px 50px;
+   }
+
+#room4page-links {
+     display: flex;
+   }
+
+#room4page-links .nav-item {
+      width: 100%;
+      list-style: none;
+      background-color: #26C13E;
+      padding-left: 30px;
+      padding-right: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+#room4page-links .room4page-nav-links {
+     list-style: none;
+     display: flex;
+     padding: 0;
+     margin: 0;
+   }
+
+#room4page-links .nav-item a {
+      /* display: inline-block; */
+      /* padding: 10px 15px; */
+      /* text-decoration: none;
+      color: white;
+      font-family: Courier, monospace;
+      text-align: left;
+      display: flex;
+      width: 100%; */
+      padding-left: 30px;
+      padding-right: 30px;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+      font-family: Courier, monospace;
+      text-align: center;
+      display: flex;
+      width: 100%;
+    }
+
+    /* next page */
+
+#main-room5page {
+      /* max-width: 500px; */
+      margin:  auto;
+      display: flex;
+      flex-direction: column;
+      min-height: 90vh;
+      flex: 1;
+      align-items: center;
+    }
+
+#body-room5page {
+      background-color: #000000;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+#text-room5page {
+        display: flex;
+        font-family: Courier, monospace;
+        color: white;
+        text-align: center;
+        font-style: italic;
+        flex-direction: column;
+        margin: 30px;
+        padding: 14px 30px;
+    }
+
+#dropdown-room5page {
+      display: flex;
+      text-align: center;
+      margin: 30px;
+      padding: 50px;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+#dropdown-room5page .room-choice5 {
+      cursor: pointer;
+      background-color: #26C13E;
+      text-align: center;
+      color: white;
+      font-family: Courier, monospace;
+      text-transform: lowercase;
+      margin: 30px;
+      padding: 14px 30px;
+      font-size: 17px;
+      border-style: ridge;
+      border-width: 10px;
+      border-color: #0E4717;
+      justify-content: center;
+      width: 300px;
+      height: 80px;
+    }
+
+#dropdown-room5page .room-choice5:hover {
+      background-color: #0E4717;
+      color: #26C13E;
+    }
+
+#dropdown-room5page select {
+      cursor: pointer;
+      background-color: #26C13E;
+      text-align: center;
+      color: white;
+      font-family: Courier, monospace;
+      text-transform: lowercase;
+      margin: 30px;
+      padding: 14px 30px;
+      font-size: 17px;
+      border-style: ridge;
+      border-width: 10px;
+      border-color: #0E4717;
+      justify-content: center;
+      width: 300px;
+      height: 80px;
+    }
+
+.footer-room5page {
+      margin: auto -1 -1 -1;
+      background-color: #1F2A2B;
+      text-align: center;
+      font-family: Courier, monospace;
+      font-size: 15px;
+      font-style: italic;
+      color: #6E7C7E;
+      padding: 20px 50px;
+    }
+
+#room5page-links {
+      display: flex;
+    }
+
+#room5page-links .nav-item {
+       width: 100%;
+       list-style: none;
+       background-color: #26C13E;
+       padding-left: 30px;
+       padding-right: 10px;
+       display: flex;
+       justify-content: center;
+     }
+
+#room5page-links .room5page-nav-links {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+
+#room5page-links .nav-item a {
+       /* display: inline-block; */
+       /* padding: 10px 15px; */
+       /* text-decoration: none;
+       color: white;
+       font-family: Courier, monospace;
+       text-align: left;
+       display: flex;
+       width: 100%; */
+       padding-left: 30px;
+       padding-right: 30px;
+       padding: 10px;
+       text-decoration: none;
+       color: white;
+       font-family: Courier, monospace;
+       text-align: center;
+       display: flex;
+       width: 100%;
+     }
+
+/* next page */
+
+#main-room6page {
+  /* max-width: 500px; */
+  margin:  auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  flex: 1;
+  align-items: center;
+}
+
+#body-room6page {
+  background-color: #000000;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 0;
+}
+
+#text-room6page {
+    display: flex;
+    font-family: Courier, monospace;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    flex-direction: column;
+    margin: 30px;
+    padding: 14px 30px;
+}
+
+#dropdown-room6page {
+  display: flex;
+  text-align: center;
+  margin: 30px;
+  padding: 50px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#dropdown-room6page .room-choice6 {
+  cursor: pointer;
+  background-color: #26C13E;
+  text-align: center;
+  color: white;
+  font-family: Courier, monospace;
+  text-transform: lowercase;
+  margin: 30px;
+  padding: 14px 30px;
+  font-size: 17px;
+  border-style: ridge;
+  border-width: 10px;
+  border-color: #0E4717;
+  justify-content: center;
+  width: 300px;
+  height: 80px;
+}
+
+#dropdown-room6page .room-choice6:hover {
+  background-color: #0E4717;
+  color: #26C13E;
+}
+
+#dropdown-room6page select {
+  cursor: pointer;
+  background-color: #26C13E;
+  text-align: center;
+  color: white;
+  font-family: Courier, monospace;
+  text-transform: lowercase;
+  margin: 30px;
+  padding: 14px 30px;
+  font-size: 17px;
+  border-style: ridge;
+  border-width: 10px;
+  border-color: #0E4717;
+  justify-content: center;
+  width: 300px;
+  height: 80px;
+}
+
+.footer-room6page {
+  margin: auto -1 -1 -1;
+  background-color: #1F2A2B;
+  text-align: center;
+  font-family: Courier, monospace;
+  font-size: 15px;
+  font-style: italic;
+  color: #6E7C7E;
+  padding: 20px 50px;
+}
+
+#room6page-links {
+  display: flex;
+}
+
+ #room6page-links .nav-item {
+   width: 100%;
+   list-style: none;
+   background-color: #26C13E;
+   padding-left: 30px;
+   padding-right: 10px;
+   display: flex;
+   justify-content: center;
+ }
+
+#room6page-links .room6page-nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+#room6page-links .nav-item a {
+   /* display: inline-block; */
+   /* padding: 10px 15px; */
+   /* text-decoration: none;
+   color: white;
+   font-family: Courier, monospace;
+   text-align: left;
+   display: flex;
+   width: 100%; */
+   padding-left: 30px;
+   padding-right: 30px;
+   padding: 10px;
+   text-decoration: none;
+   color: white;
+   font-family: Courier, monospace;
+   text-align: center;
+   display: flex;
+   width: 100%;
+ }
+
+ /* next page */
+
+ #main-room7page {
+   /* max-width: 500px; */
+   margin:  auto;
+   display: flex;
+   flex-direction: column;
+   min-height: 90vh;
+   flex: 1;
+   align-items: center;
+ }
+
+ #body-room7page {
+   background-color: #000000;
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+   margin: 0;
+ }
+
+ #text-room7page {
+     display: flex;
+     font-family: Courier, monospace;
+     color: white;
+     text-align: center;
+     font-style: italic;
+     flex-direction: column;
+     margin: 30px;
+     padding: 14px 30px;
+ }
+
+ .footer-room7page {
+   /* margin: auto -1 -1 -1; */
+   display: flex;
+   background-color: #1F2A2B;
+   text-align: center;
+   font-family: Courier, monospace;
+   font-size: 15px;
+   font-style: italic;
+   color: #6E7C7E;
+   padding: 20px 50px;
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   justify-content: center;
+ }
+
+ #room7page-links {
+   display: flex;
+ }
+
+  #room7page-links .nav-item {
+    width: 100%;
+    list-style: none;
+    background-color: #26C13E;
+    padding-left: 30px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+ #room7page-links .room7page-nav-links {
+   list-style: none;
+   display: flex;
+   padding: 0;
+   margin: 0;
+ }
+
+ #room7page-links .nav-item a {
+    /* display: inline-block; */
+    /* padding: 10px 15px; */
+    /* text-decoration: none;
+    color: white;
+    font-family: Courier, monospace;
+    text-align: left;
+    display: flex;
+    width: 100%; */
+    padding-left: 30px;
+    padding-right: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: Courier, monospace;
+    text-align: center;
+    display: flex;
+    width: 100%;
+  }
+
+  /* next page */
+
+  #main-room8page {
+    /* max-width: 500px; */
+    margin:  auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    flex: 1;
+    align-items: center;
+  }
+
+  #body-room8page {
+    background-color: #000000;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  #text-room8page {
+      display: flex;
+      font-family: Courier, monospace;
+      color: white;
+      text-align: center;
+      font-style: italic;
+      flex-direction: column;
+      margin: 30px;
+      padding: 14px 30px;
+  }
+
+.footer-room8page {
+    /* margin: auto -1 -1 -1; */
+    display: flex;
+    background-color: #1F2A2B;
+    text-align: center;
+    font-family: Courier, monospace;
+    font-size: 15px;
+    font-style: italic;
+    color: #6E7C7E;
+    padding: 20px 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+#room8page-links {
+    display: flex;
+  }
+
+#room8page-links .nav-item {
+     width: 100%;
+     list-style: none;
+     background-color: #26C13E;
+     padding-left: 30px;
+     padding-right: 10px;
+     display: flex;
+     justify-content: center;
+   }
+
+#room8page-links .room8page-nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
+#room8page-links .nav-item a {
+     /* display: inline-block; */
+     /* padding: 10px 15px; */
+     /* text-decoration: none;
+     color: white;
+     font-family: Courier, monospace;
+     text-align: left;
+     display: flex;
+     width: 100%; */
+     padding-left: 30px;
+     padding-right: 30px;
+     padding: 10px;
+     text-decoration: none;
+     color: white;
+     font-family: Courier, monospace;
+     text-align: center;
+     display: flex;
+     width: 100%;
+   }
+
+   /* next page */
+
+#main-room9page {
+     /* max-width: 500px; */
+     margin:  auto;
+     display: flex;
+     flex-direction: column;
+     min-height: 90vh;
+     flex: 1;
+     align-items: center;
+   }
+
+#body-room9page {
+     background-color: #000000;
+     display: flex;
+     min-height: 100vh;
+     flex-direction: column;
+     align-content: center;
+     justify-content: center;
+     margin: 0;
+   }
+
+#text-room9page {
+       display: flex;
+       font-family: Courier, monospace;
+       color: white;
+       text-align: center;
+       font-style: italic;
+       flex-direction: column;
+       margin: 30px;
+       padding: 14px 30px;
+   }
+
+.footer-room9page {
+     /* margin: auto -1 -1 -1; */
+     display: flex;
+     background-color: #1F2A2B;
+     text-align: center;
+     font-family: Courier, monospace;
+     font-size: 15px;
+     font-style: italic;
+     color: #6E7C7E;
+     padding: 20px 50px;
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     justify-content: center;
+   }
+
+#room9page-links {
+     display: flex;
+   }
+
+#room9page-links .nav-item {
+      width: 100%;
+      list-style: none;
+      background-color: #26C13E;
+      padding-left: 30px;
+      padding-right: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+#room9page-links .room9page-nav-links {
+     list-style: none;
+     display: flex;
+     padding: 0;
+     margin: 0;
+   }
+
+#room9page-links .nav-item a {
+      /* display: inline-block; */
+      /* padding: 10px 15px; */
+      /* text-decoration: none;
+      color: white;
+      font-family: Courier, monospace;
+      text-align: left;
+      display: flex;
+      width: 100%; */
+      padding-left: 30px;
+      padding-right: 30px;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+      font-family: Courier, monospace;
+      text-align: center;
+      display: flex;
+      width: 100%;
+    }
+
+    /* next page */
+
+#main-room10page {
+         /* max-width: 500px; */
+         margin:  auto;
+         display: flex;
+         flex-direction: column;
+         min-height: 90vh;
+         flex: 1;
+         align-items: center;
+       }
+
+#body-room10page {
+         background-color: #000000;
+         display: flex;
+         min-height: 100vh;
+         flex-direction: column;
+         align-content: center;
+         justify-content: center;
+         margin: 0;
+       }
+
+#text-room10page {
+           display: flex;
+           font-family: Courier, monospace;
+           color: white;
+           text-align: center;
+           font-style: italic;
+           flex-direction: column;
+           margin: 30px;
+           padding: 14px 30px;
+       }
+
+.footer-room10page {
+         /* margin: auto -1 -1 -1; */
+         display: flex;
+         background-color: #1F2A2B;
+         text-align: center;
+         font-family: Courier, monospace;
+         font-size: 15px;
+         font-style: italic;
+         color: #6E7C7E;
+         padding: 20px 50px;
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+         justify-content: center;
+       }
+
+#room10page-links {
+         display: flex;
+       }
+
+#room10page-links .nav-item {
+          width: 100%;
+          list-style: none;
+          background-color: #26C13E;
+          padding-left: 30px;
+          padding-right: 10px;
+          display: flex;
+          justify-content: center;
+        }
+
+#room10page-links .room10page-nav-links {
+         list-style: none;
+         display: flex;
+         padding: 0;
+         margin: 0;
+       }
+
+#room10page-links .nav-item a {
+          /* display: inline-block; */
+          /* padding: 10px 15px; */
+          /* text-decoration: none;
+          color: white;
+          font-family: Courier, monospace;
+          text-align: left;
+          display: flex;
+          width: 100%; */
+          padding-left: 30px;
+          padding-right: 30px;
+          padding: 10px;
+          text-decoration: none;
+          color: white;
+          font-family: Courier, monospace;
+          text-align: center;
+          display: flex;
+          width: 100%;
+        }

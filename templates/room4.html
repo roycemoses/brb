@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BRB\'s Project</title>
+    <title>Room Four</title>
+    <link rel="stylesheet" href="../css/style.css">
   </head>
-  <body>
-    <p>You entered room 4!</p>
-    <form method="get" action="/event3_1">
-      <select name="room-type">
-        <option value="7">Room 7</option>
-        <option value="8">Room 8</option>
-      </select>
-    <input type="submit" value="Submit">
-      <p>Choose 7 or 8</p>
+  <body id = "body-room4page">
+    <div id = "main-room4page">
+
+      <div id = "room4page-links">
+        <nav class = "navbar-room4page">
+          <ul class = "room4page-nav-links">
+            <li class = "nav-item"><a href = "/">start page</a></li>
+            <li class = "nav-item"><a href = "/">load past choices</a></li>
+            <li class = "nav-item"><a href = "/">about</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id = "text-room4page">
+        <h1>Entering Room Four...</h1>
+        <p>Choose your next step carefully.</p>
+        <p2>Enter room seven or eight...<p2>
+      </div>
+
+      <div id = dropdown-room4page>
+        <form method = "get" action = "/event3_1">
+          <select name = "room-type">
+            <option value = "7">Room 7</option>
+            <option value = "8">Room 8</option>
+          </select>
+        <button class = "room-choice4" type = "submit">go to the next room</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class = "footer-room4page">created by CSSI 2019 students</footer>
+
   </body>
 </html>

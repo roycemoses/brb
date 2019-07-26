@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BRB\'s Project</title>
+    <title>Your Adventure</title>
+    <link rel="stylesheet" href="../css/style.css">
   </head>
-  <body>
-    <p>Your name is: {{user_name}}</p>
-    <p>Choose room 1 or room 2:</p>
-    <form method="get" action="/event1">
-      <select name="room-type">
-        <option value="1">Room 1</option>
-        <option value="2">Room 2</option>
-      </select>
-    <input type="submit" value="Submit">
-    </form>
+  <body id = "body-gamepage">
+    <div id = "main-gamepage">
+
+      <div id = "gamepage-links">
+        <nav class = "navbar-gamepage">
+          <ul class = "gamepage-nav-links">
+            <li class = "nav-item"><a href = "/">start page</a></li>
+            <li class = "nav-item"><a href = "/">load past choices</a></li>
+            <li class = "nav-item"><a href = "/">about</a></li>
+          </ul>
+      </nav>
+    </div>
+
+      <div id = "text-gamepage">
+        <p>Your name is: {{user_name}}</p>
+        <p2>Choose room 1 or room 2:</p2>
+      </div>
+
+        <div id = "dropdown-gamepage">
+          <form method = "get" action = "/event1">
+            <select name = "room-type">
+              <option value = "1">Room 1</option>
+              <option value = "2">Room 2</option>
+            </select>
+            <button class = "room-choice" type = "submit">go to the next room</button>
+          </form>
+        </div>
+
+      </div>
+
+    <footer class = "footer-gamepage">created by CSSI 2019 students</footer>
+
   </body>
 </html>
