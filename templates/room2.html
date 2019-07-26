@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BRB\'s Project</title>
+    <title>Room Two</title>
+    <link rel="stylesheet" href="../css/style.css">
   </head>
-  <body>
-    <p>You entered room 2!</p>
-    <form method="get" action="/event2_2">
-      <select name="room-type">
-        <option value="5">Room 5</option>
-        <option value="6">Room 6</option>
-      </select>
-    <input type="submit" value="Submit">
-    <p>Choose 5 or 6.</p>
+  <body id = "body-room2page">
+    <div id = "main-room2page">
+
+      <div id = "room2page-links">
+        <nav class = "navbar-room2page">
+          <ul class = "room2page-nav-links">
+            <li class = "nav-item"><a href = "/">start page</a></li>
+            <li class = "nav-item"><a href = "/">load past choices</a></li>
+            <li class = "nav-item"><a href = "/">about</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id = "text-room2page">
+        <h1>Entering Room Two...</h1>
+        <p>What path will you choose?</p>
+        <p2>Enter room five or six...<p2>
+      </div>
+
+      <div id = dropdown-room2page>
+        <form method = "get" action = "/event2_2">
+          <select name = "room-type">
+            <option value = "5">Room 5</option>
+            <option value = "6">Room 6</option>
+          </select>
+        <button class = "room-choice2" type = "submit">go to the next room</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class = "footer-room2page">created by CSSI 2019 students</footer>
+
   </body>
 </html>
