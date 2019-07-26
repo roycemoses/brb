@@ -23,6 +23,12 @@ class StartPage(webapp2.RequestHandler):
 
         self.response.write(start_page_template.render())
 
+class AboutPage(webapp2.RequestHandler):
+    def get(self):
+        about_page_template = JINJA_ENVIRONMENT.get_template('templates/about.html')
+
+        self.response.write(about_page_template.render())
+
 # class LoginPage(webapp2.RequestHandler):
 #     def get(self):
 #         user = users.get_current_user()
@@ -224,6 +230,7 @@ class Event3_2(webapp2.RequestHandler):
 # the app configuration section
 app = webapp2.WSGIApplication([
     ('/', StartPage),
+    ('/about', AboutPage),
     ('/createcharacter', CreateCharacterPage),
     ('/continue', Continue),
     ('/gameplay', GameplayPage),
