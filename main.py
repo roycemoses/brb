@@ -5,6 +5,7 @@ import os
 import json
 import random
 import jinja2
+import time
 
 from models import Profile
 from google.appengine.api import users
@@ -36,7 +37,11 @@ class StartPage(webapp2.RequestHandler):
 #         self.response.write(
 #             '<html><body>{}</body></html>'.format(greeting))
 
-
+def save_prog(handler):
+    logged_in_user = users.get_current_user()
+    my_profile = Profile.query().filter(Profile.user_id == logged_in_user.user_id()).get()
+    my_profile.current_room = handler.request.path_qs
+    my_profile.put()
 
 class CreateCharacterPage(webapp2.RequestHandler):
     def get(self):
@@ -55,6 +60,24 @@ class CreateCharacterPage(webapp2.RequestHandler):
 
         self.response.write(profile_template.render(dict_for_template))
 
+class Continue(webapp2.RequestHandler):
+    def get(self):
+        logged_in_user = users.get_current_user()
+        my_profile = Profile.query().filter(Profile.user_id == logged_in_user.user_id()).get()
+
+        self.redirect(my_profile.current_room)
+
+
+class LogoutPage(webapp2.RequestHandler):
+    def get(self):
+        logout_template = JINJA_ENVIRONMENT.get_template("templates/logout.html")
+        logout_url = users.create_logout_url('/')
+
+        logout_dict_for_template = {
+        'logout_button': logout_url,
+        }
+
+        self.response.write(logout_template.render(logout_dict_for_template))
 
 class GameplayPage(webapp2.RequestHandler):
     def post(self):
@@ -62,36 +85,32 @@ class GameplayPage(webapp2.RequestHandler):
         logged_in_user = users.get_current_user()
         my_nickname = self.request.get('nickname')
 
-        my_profiles = Profile.query().filter(Profile.user_id == logged_in_user.user_id()).fetch(1)
-        if my_profiles:
-            my_profile = my_profiles[0]
-        else:
+        my_profile = Profile.query().filter(Profile.user_id == logged_in_user.user_id()).get()
+        if not my_profile:
             my_profile = Profile()
+
         my_profile.nickname = my_nickname
         my_profile.user_id = logged_in_user.user_id()
         my_profile.put()
+        time.sleep(0.1)
 
         name_dict = {
-            "profile": my_profile
-
+            "profile": my_profile,
+            "nickname": my_nickname
         }
-
-        self.response.write(game_page_template.render(name_dict))
+        # self.response.write(game_page_template.render(name_dict))
         profile = Profile.query().filter(Profile.user_id == logged_in_user.user_id()).fetch()[0]
         nickname = profile.nickname
-        print(nickname)
+
+
+        self.response.write(game_page_template.render(name_dict))
 
 class Event1(webapp2.RequestHandler):
     def get(self):
+        save_prog(self)
         room1_page_template = JINJA_ENVIRONMENT.get_template('templates/room1.html')
         room2_page_template = JINJA_ENVIRONMENT.get_template('templates/room2.html')
         game_page_template = JINJA_ENVIRONMENT.get_template('templates/gameplay.html')
-
-        usernameinput = self.request.get('user-name')
-
-        name_dict = {
-            "user_name": usernameinput
-        }
 
         room_input = self.request.get('room-type')
 
@@ -105,6 +124,7 @@ class Event1(webapp2.RequestHandler):
 
 class Event2_1(webapp2.RequestHandler):
     def get(self):
+        save_prog(self)
         room3_page_template = JINJA_ENVIRONMENT.get_template('templates/room3.html')
         room4_page_template = JINJA_ENVIRONMENT.get_template('templates/room4.html')
         game_page_template = JINJA_ENVIRONMENT.get_template('templates/gameplay.html')
@@ -121,6 +141,7 @@ class Event2_1(webapp2.RequestHandler):
 
 class Event2_2(webapp2.RequestHandler):
     def get(self):
+        save_prog(self)
         room5_page_template = JINJA_ENVIRONMENT.get_template('templates/room5.html')
         room6_page_template = JINJA_ENVIRONMENT.get_template('templates/room6.html')
 
@@ -136,6 +157,7 @@ class Event2_2(webapp2.RequestHandler):
 
 class Event3_1(webapp2.RequestHandler):
     def get(self):
+        save_prog(self)
         room7_page_template = JINJA_ENVIRONMENT.get_template('templates/room7WIN.html')
         room8_page_template = JINJA_ENVIRONMENT.get_template('templates/room8LOSE.html')
 
@@ -151,6 +173,7 @@ class Event3_1(webapp2.RequestHandler):
 
 class Event3_2(webapp2.RequestHandler):
     def get(self):
+        save_prog(self)
         room9_page_template = JINJA_ENVIRONMENT.get_template('templates/room9LOSE.html')
         room10_page_template = JINJA_ENVIRONMENT.get_template('templates/room10LOSE.html')
 
@@ -202,10 +225,12 @@ class Event3_2(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', StartPage),
     ('/createcharacter', CreateCharacterPage),
+    ('/continue', Continue),
     ('/gameplay', GameplayPage),
     ('/event1', Event1),
     ('/event2_1', Event2_1),
     ('/event2_2', Event2_2),
     ('/event3_1', Event3_1),
     ('/event3_2', Event3_2),
+    ('/logout', LogoutPage),
 ], debug=True)

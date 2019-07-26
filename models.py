@@ -5,10 +5,8 @@ class Profile(ndb.Model):
     user_id = ndb.StringProperty()
     joined_on = ndb.DateTimeProperty(auto_now_add=True)
     updated_on = ndb.DateTimeProperty(auto_now=True)
+    current_room = ndb.StringProperty()
 
 
-
-    # username = ndb.StringProperty(required=True)
-    # user_id = ndb.StringProperty()
     # choices = ndb.StringProperty(repeated=True)
     #make this a list? ^

@@ -1706,6 +1706,28 @@ time, mark, audio, video {
  #text-aboutpage h1 {
  }
 
+ #buttons-logoutpage .content-button5 {
+   cursor: pointer;
+   background-color: #26C13E;
+   text-align: center;
+   color: white;
+   font-family: Courier, monospace;
+   text-transform: lowercase;
+   margin: 30px;
+   padding: 14px 30px;
+   font-size: 20px;
+   border-style: ridge;
+   border-width: 10px;
+   border-color: #0E4717;
+   justify-content: center;
+   width: 300px;
+ }
+
+ #buttons-logoutpage .content-button5:hover {
+   background-color: #0E4717;
+   color: #26C13E;
+ }
+
 .footer-logoutpage {
    /* margin: auto -1 -1 -1; */
    display: flex;
